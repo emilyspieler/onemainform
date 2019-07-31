@@ -7,15 +7,17 @@
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     <title>OneMain Contact Form</title>
   </head>
   <body>
-    <div class="jumbotron">
-      <h1>Enter Information For Application</h1>
+    <div class="jumbotron center intro">
+      <h1>OneMain Contact Form</h1>
+      <h2>Apply for a loan today</h2>
     </div>
     <div class="container">
       <div class="row row justify-content-md-center">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <form>
               <div class="form-group" id="applicationform">
                 <label for="fullname">Full Name</label>
@@ -25,37 +27,47 @@
               <div class="form-group">
                 <label for="emailaddress">Email Address</label>
                 <input type="email" class="form-control" id="emailaddress" placeholder="Enter Email" required>
+                <small id="fullname-help" class="form-text text-muted">Please enter your email address</small>
               </div>
               <div class="form-group">
                 <label for="accoutnumber">Account Number</label>
                 <input type="text" class="form-control" id="accountnumber" placeholder="Enter Account Number" required>
+                <small id="fullname-help" class="form-text text-muted">Please enter your bank account number</small>
               </div>
               <div class="form-group">
                 <label for="routingnumber">Routing Number</label>
                 <input type="text" pattern="\d*" class="form-control" id="routingnumber" placeholder="Enter Routing Number" minlength="9" maxlength="9" required>
+                <small id="fullname-help" class="form-text text-muted">Please enter your routing number</small>
               </div>
                 <select class="browser-default custom-select" id="cardtype" required>
-                  <option value="" selected>Select Card Value</option>
+                  <option value="" selected>Select Card Type</option>
                   <option value="1">Credit</option>
                   <option value="2">Debit</option>
                 </select>
+                <small id="fullname-help" class="form-text text-muted">Select whether you would like to enter a debit or credit card number</small>
               <!-- if user selects credit card -->
               <div class="form-group" id="credit">
                 <label for="creditcardnumber">Credit Card Number</label>
                 <input type="text" pattern="\d*" class="form-control" id="creditcardnumber" placeholder="Enter Credit Card Number" minlength="16" maxlength="16" required>
-                <label for="creditexpirationdate">Experiation Date</label>
-                <input id="datefieldcredit" type='date' min='1899-01-01' max='2000-13-13'required></input>
-                <label for="creditcvv" maxlength="3">CVV</label>
+                  <small id="fullname-help" class="form-text text-muted">Please enter a credit card number</small>
+                <label for="creditexpirationdate" class="expiration">Expiration Date</label>
+                <input id="datefieldcredit" type='date' min='1899-01-01' max='2000-13-13'class="expiration" required></input>
+                  <small id="fullname-help" class="form-text text-muted">Please enter a credit card experiation date</small>
+                <label for="creditcvv" maxlength="3" class="cvv">CVV</label>
                 <input type="text" pattern="\d*" class="form-control" id="creditcvv" placeholder="Credit Card CVV" minlength="3" maxlength="3" required>
+                  <small id="fullname-help" class="form-text text-muted">Please enter a credit card CVV. This can be found on the back of your card</small>
               </div>
               <!-- if user selects debit card -->
               <div class="form-group" id="debit">
                 <label for="debitcardnumber">Debit Card Number</label>
                 <input type="text" class="form-control" id="debitcardnumber" placeholder="Enter Debit Card Number" minlength="16" maxlength="16" required>
-                <label for="debitexpirationdate">Experiation Date</label>
-                <input id="datefield" type='date' min='1899-01-01' max='2000-13-13'required></input>
-                <label for="debitcvv" maxlength="3">CVV</label>
+                  <small id="fullname-help" class="form-text text-muted">Please enter a debit card number</small>
+                <label for="debitexpirationdate" class="expiration">Expiration Date</label>
+                <input id="datefield" type='date' min='1899-01-01' max='2000-13-13'required class="expiration"></input>
+                  <small id="fullname-help" class="form-text text-muted">Please enter a debit card expiration date</small>
+                <label for="debitcvv" maxlength="3" class="cvv">CVV</label>
                 <input type="text" class="form-control" id="debitcvv" placeholder="Debit Card CCV" minlength="3" maxlength="3" required>
+                  <small id="fullname-help" class="form-text text-muted">Please enter a debit card CVV. This can be found on the back of your card.</small>
               </div>
             <button id="submit" type="submit" class="btn btn-primary">Submit</button>
           </form>
@@ -68,18 +80,13 @@
     <div class="container-fluid text-center text-md-left">
       <div class="row">
         <div class="col-md-6 mt-md-0 mt-3">
-          <h5 class="text-uppercase">Footer Content</h5>
-          <p>Here you can use rows and columns to organize your footer content.</p>
-        </div>
-        <hr class="clearfix w-100 d-md-none pb-3">
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">Links</h5>
+          <h5 class="text-uppercase">OneMain</h5>
+          <p>Questions? Please contact us at email@email.com with questions</p>
         </div>
       </div>
     </div>
     </div>
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    <div class="footer-copyright text-center py-3">© 2019 Copyright: Emily Spieler
     </div>
   </footer>
 </html>

@@ -29,7 +29,7 @@ Assume the form submits to a secure backend.
 _this form is created in front end format only with HTML, CSS, JS, and bootstrap. Please let me know if you would like me to add Node.js, Rails, or PHP features._
 
 All fields are required, though the form changes depending on if you are planing to use a debit card or bank account.
-_All fields are set to required in HTML5 and validate syntax there as well. Feel free to let me know if you would like JS validation written in addition to HTML5_ 
+_All fields are set to required in HTML5 and validate syntax there as well. Feel free to let me know if you would like JS validation written in addition to HTML5_
 
 *in order to access credit vs debit features* _credit or debit must be selected from the dropdown menu for the appropriate box to appear_
 
@@ -43,6 +43,6 @@ Routing number should be no more than 9 numbers.
 _see above_
 
 Get as close to the design as you can using whatever libraries/frameworks you’re most comfortable with. If you have any questions, feel free to ask.
-_designed using boostrap and a11y standards as well._
+_designed using boostrap and a11y standards as well (ability to use without a mouse, descriptions for screen readers, high contrast)._
 
 *Please feel free to email emilyspieler1@gmail.com if there is additional criteria that is needed*
