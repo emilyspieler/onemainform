@@ -1,0 +1,22 @@
+footer {
+  background-color: grey;
+  padding-top: 20px;
+  margin-top: 20px;
+  color: white;
+}
+
+#credit{
+  display: none;
+}
+
+#credit.show {
+  display: block;
+}
+
+#debit{
+  display: none;
+}
+
+#debit.show {
+  display: block;
+}

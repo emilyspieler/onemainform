@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>OneMain Contact Form</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1>Enter Information For Application</h1>
+    </div>
+    <div class="container">
+      <div class="row row justify-content-md-center">
+        <div class="col-sm-4">
+          <form>
+              <div class="form-group" id="applicationform">
+                <label for="fullname">Full Name</label>
+                <input type="text" class="form-control" id="fullname" aria-describedby="emailHelp" placeholder="Enter Full Name" required>
+                <small id="fullname-help" class="form-text text-muted">Please enter your full name as seen on your billing statement</small>
+              </div>
+              <div class="form-group">
+                <label for="emailaddress">Email Address</label>
+                <input type="email" class="form-control" id="emailaddress" placeholder="Enter Email" required>
+              </div>
+              <div class="form-group">
+                <label for="accoutnumber">Account Number</label>
+                <input type="text" class="form-control" id="accountnumber" placeholder="Enter Account Number" required>
+              </div>
+              <div class="form-group">
+                <label for="routingnumber">Routing Number</label>
+                <input type="text" pattern="\d*" class="form-control" id="routingnumber" placeholder="Enter Routing Number" minlength="9" maxlength="9" required>
+              </div>
+                <select class="browser-default custom-select" id="cardtype">
+                  <option selected>Select Payment Type</option>
+                  <option value="1">Credit</option>
+                  <option value="2">Debit</option>
+                </select>
+              <!-- if user selects credit card -->
+              <div class="form-group" id="credit">
+                <label for="creditcardnumber">Credit Card Number</label>
+                <label for="creditexpirationdate">Experiation Date</label>
+                <label for="creditcvv" maxlength="3">CVV</label>
+                <input type="text" pattern="\d*" class="form-control" id="creditcardnumber" placeholder="Enter Credit Card Number" minlength="16" maxlength="16" required>
+                <input type="date" class="form-control" id="creditexpirationdate" placeholder="Credit Card Expiration Date" required>
+                <input type="text" pattern="\d*" class="form-control" id="creditcvv" placeholder="Credit Card CVV" minlength="3" maxlength="3" required>
+              </div>
+              <!-- if user selects debit card -->
+              <div class="form-group" id="debit">
+                <label for="debitcardnumber">Debit Card Number</label>
+                <label for="debitexpirationdate">Experiation Date</label>
+                <label for="debitcvv" maxlength="3">CVV</label>
+                <input type="text" class="form-control" id="debitcardnumber" placeholder="Enter Debit Card Number" minlength="16" maxlength="16" required>
+                <input type="date" class="form-control" id="debitexpirationdate" placeholder="Debit Expiration Date" required>
+                <input type="text" class="form-control" id="debitcvv" placeholder="Debit Card CCV" minlength="3" maxlength="3" required>
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <script src="index.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer class="page-footer font-small">
+    <div class="container-fluid text-center text-md-left">
+      <div class="row">
+        <div class="col-md-6 mt-md-0 mt-3">
+          <h5 class="text-uppercase">Footer Content</h5>
+          <p>Here you can use rows and columns to organize your footer content.</p>
+        </div>
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <div class="col-md-3 mb-md-0 mb-3">
+          <h5 class="text-uppercase">Links</h5>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    </div>
+  </footer>
+</html>
