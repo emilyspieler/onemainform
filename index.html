@@ -34,30 +34,30 @@
                 <label for="routingnumber">Routing Number</label>
                 <input type="text" pattern="\d*" class="form-control" id="routingnumber" placeholder="Enter Routing Number" minlength="9" maxlength="9" required>
               </div>
-                <select class="browser-default custom-select" id="cardtype">
-                  <option selected>Select Payment Type</option>
+                <select class="browser-default custom-select" id="cardtype" required>
+                  <option value="" selected>Select Card Value</option>
                   <option value="1">Credit</option>
                   <option value="2">Debit</option>
                 </select>
               <!-- if user selects credit card -->
               <div class="form-group" id="credit">
                 <label for="creditcardnumber">Credit Card Number</label>
-                <label for="creditexpirationdate">Experiation Date</label>
-                <label for="creditcvv" maxlength="3">CVV</label>
                 <input type="text" pattern="\d*" class="form-control" id="creditcardnumber" placeholder="Enter Credit Card Number" minlength="16" maxlength="16" required>
-                <input type="date" class="form-control" id="creditexpirationdate" placeholder="Credit Card Expiration Date" required>
+                <label for="creditexpirationdate">Experiation Date</label>
+                <input id="datefieldcredit" type='date' min='1899-01-01' max='2000-13-13'required></input>
+                <label for="creditcvv" maxlength="3">CVV</label>
                 <input type="text" pattern="\d*" class="form-control" id="creditcvv" placeholder="Credit Card CVV" minlength="3" maxlength="3" required>
               </div>
               <!-- if user selects debit card -->
               <div class="form-group" id="debit">
                 <label for="debitcardnumber">Debit Card Number</label>
-                <label for="debitexpirationdate">Experiation Date</label>
-                <label for="debitcvv" maxlength="3">CVV</label>
                 <input type="text" class="form-control" id="debitcardnumber" placeholder="Enter Debit Card Number" minlength="16" maxlength="16" required>
-                <input type="date" class="form-control" id="debitexpirationdate" placeholder="Debit Expiration Date" required>
+                <label for="debitexpirationdate">Experiation Date</label>
+                <input id="datefield" type='date' min='1899-01-01' max='2000-13-13'required></input>
+                <label for="debitcvv" maxlength="3">CVV</label>
                 <input type="text" class="form-control" id="debitcvv" placeholder="Debit Card CCV" minlength="3" maxlength="3" required>
               </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button id="submit" type="submit" class="btn btn-primary">Submit</button>
           </form>
           <script src="index.js"></script>
         </div>
