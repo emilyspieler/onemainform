@@ -11,6 +11,9 @@ table {
   margin: 0 !important;
   padding: 0px !important;
   vertical-align: text-top !important;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5px;
 }
 
 .table-responsive-sm {
@@ -112,6 +115,9 @@ p {
 
 #imageblock {
   background-color: rgb(243, 247, 252);
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5px;
 }
 
 hr {
@@ -232,6 +238,14 @@ input#creditcvv.form-control {
   td {
     display: block;
     width: 100%;
+  }
+
+  label.toggleName {
+    margin-top: 10px;
+  }
+
+  .form-group .toggle{
+    margin-top: 10px;
   }
 
   #imageblock {
