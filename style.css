@@ -3,6 +3,10 @@ body {
   margin-top: 40px;
 }
 
+form {
+  width: 60%;
+}
+
 table {
   margin: 0 !important;
   padding: 0px !important;
@@ -203,6 +207,10 @@ input#creditcvv.form-control {
 
   h1 {
     text-align: center;
+  }
+
+  form {
+    width: 100%;
   }
 
   h2 {
