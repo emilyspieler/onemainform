@@ -232,6 +232,7 @@ input#creditcvv.form-control {
     height: 0;
     margin: 0px !important;
     display: none;
+    opacity: 0;
   }
 
   br {
