@@ -23,6 +23,7 @@ $(function () {
       }
       $(this).addClass('selected');
   });
+
 //password verification
 var number = document.getElementById("accountnumber1")
   , confirm_number = document.getElementById("accountnumber2");

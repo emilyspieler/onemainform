@@ -17,7 +17,7 @@
               <div class="col-sm-12">
                 <h1>One-Time Loan Payment</h1>
                 <p>Fill out the form below to complete your payment</p>
-                <div class="table-responsive-sm col-md-8" >
+                <div class="table-responsive-sm">
                 <form name="formName">
                 <table width="850" border="1" cellspacing="0" cellpadding="0" class="table">
                   <tr>
@@ -80,30 +80,47 @@
                             <input type="text" class="form-control rounded-0" id="fullname" required>
                           </div>
                         </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="checking">
-                            <label for="fullname">Confirm Bank Account Number</label>
-                            <input type="text" pattern="\d*" class="form-control rounded-0" id="accountnumber2" placeholder="" required>
-                          </div>
-                          <div class="debit" id="halfcellone">
-                            <label for="fullname" class="expiration">Expiration Date</label>
-                            <input id="datefieldcredit" type='date' min='1899-01-01' max='2000-13-13' class="expiration" required></input>
-                            <label for="fullname">CVV</label>
-                            <input type="text" pattern="\d*" class="form-control" id="creditcvv" minlength="3" maxlength="3" required>
-                          </div>
-                        </td>
-                      </tr>
-                  </table>
-                  <button id="submit" type="submit" class="btn btn-primary">Make Payment</button>
-                </form>
+                        </tr>
+                          <tr>
+                            <td>
+                              <div class="checking">
+                                <label for="fullname">Confirm Bank Account Number</label>
+                                <input type="text" pattern="\d*" class="form-control rounded-0" id="accountnumber2" placeholder="" required>
+                              </div>
+                              <div class="debit" id="halfcellone">
+                                <label for="expiration">Expiration Date</label>
+                                <input id="datefieldcredit" type='date' min='1899-01-01' max='2000-13-13' class="expiration" required></input>
+                                <label for="fullname">CVV</label>
+                                <input type="text" pattern="\d*" class="form-control" id="creditcvv" minlength="3" maxlength="3" required>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr id="imageblockNew">
+                            <td>
+                              <div class="checking">
+                                <h2>Where can I find account and routing number?</h2>
+                                    <img src="check.jpg" alt="check example">
+                                    <hr>
+                                    <hr>
+                                  <div id='routeblock'>
+                                    <h4>Routing Number</h4>
+                                    <h4>Account Number</h4>
+                                  </div>
+                                </div>
+                                <div class="debit">
+                                  <h2>Where can I find the CVV number?</h2>
+                                      <img class="debit-image" src="cvv.png" alt="credit example">
+                                  </div>
+                              </td>
+                          </tr>
+                        </table>
+                      <button id="submit" type="submit" class="btn btn-primary">Make Payment</button>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
           <script src="index.js"></script>
         </div>
       </div>
